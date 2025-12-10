@@ -35,7 +35,7 @@
             <label for="priority">優先度 <span class="required">*</span></label>
             <select id="priority" name="priority" required>
               <option value="高" <%= todo && todo.priority === '高' ? 'selected' : '' %>>高</option>
-              <option value="中" <%= todo && todo.priority === '中' ? 'selected' : '' %> <%= !todo ? 'selected' : '' %>>中</option>
+              <option value="中" <%= !todo || todo.priority === '中' ? 'selected' : '' %>>中</option>
               <option value="低" <%= todo && todo.priority === '低' ? 'selected' : '' %>>低</option>
             </select>
           </div>
